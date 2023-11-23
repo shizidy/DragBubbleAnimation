@@ -70,7 +70,9 @@
         } else {
             [self calculatePoint];
         }
-    } else if (pan.state == UIGestureRecognizerStateFailed || pan.state == UIGestureRecognizerStateEnded || pan.state == UIGestureRecognizerStateCancelled) {
+    } else if (pan.state == UIGestureRecognizerStateFailed ||
+               pan.state == UIGestureRecognizerStateEnded ||
+               pan.state == UIGestureRecognizerStateCancelled) {
         [self.shapeLayer removeFromSuperlayer];
         [UIView animateWithDuration:.5 delay:0 usingSpringWithDamping:.3 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             self.view2.center = self.oldViewCenter;
